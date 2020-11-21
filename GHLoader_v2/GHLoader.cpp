@@ -106,6 +106,10 @@ LoaderInfo GHLoader::ReadLoaderInfo()
 	uCounter += ReadStringFromResource(&vData[uCounter], loaderInfo.formInfo.uGameTitleLen, loaderInfo.formInfo.szGameTitle);
 	uCounter += ReadStringFromResource(&vData[uCounter], loaderInfo.formInfo.uAuthorLen, loaderInfo.formInfo.szAuthor);
 	//loader settings.... lol
+
+
+
+
 	uCounter += ReadStringFromResource(&vData[uCounter], loaderInfo.loadSettings.uProcNameLen, loaderInfo.loadSettings.szProcessName);
 	uCounter += ReadFromResource<BOOL>(&vData[uCounter], loaderInfo.loadSettings.bRandomNames);
 	uCounter += ReadFromResource<BOOL>(&vData[uCounter], loaderInfo.loadSettings.bUPX);
@@ -118,6 +122,10 @@ LoaderInfo GHLoader::ReadLoaderInfo()
 	uCounter += ReadFromResource<BOOL>(&vData[uCounter], loaderInfo.injSettings.bCleanDD);
 	uCounter += ReadFromResource<BOOL>(&vData[uCounter], loaderInfo.injSettings.bUnlinkPEB);
 	uCounter += ReadFromResource<uint>(&vData[uCounter], loaderInfo.injSettings.iDelay);
+
+	//sfh
+
+
 	return loaderInfo;
 }
 
